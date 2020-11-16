@@ -1,0 +1,30 @@
+import { catchError, map } from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
+import { Injectable, Injector } from '@angular/core';
+import { environment } from 'src/environments/environment';
+import { User } from '../models/user.model';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class AuthService  {
+
+  protected readonly API_PATH = `${environment.BASE_URL}`
+  constructor(private http:HttpClient) {
+  }
+
+  public signin(user: User): Observable<any> {
+    return this.http.post(`${this.API_PATH}auth/signin`,user);
+  }
+
+  public validate() : Observable<any>{
+    return this.http.post(`${this.API_PATH}auth/validate`,null);
+  
+  }
+
+  
+  
+
+  
+}

@@ -4,8 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { SignInComponent } from 'src/app/pages/authentication/sign-in/sign-in.component';
 
 const routes: Routes = [
-  {path: 'sign-in', component: SignInComponent},
-  {path: 'sign-up', component: SignUpComponent},
+  {path: '', loadChildren: ()=> import('../../pages/authentication/authentication.module').then(m=>m.AuthenticationModule)},
 ];
 
 @NgModule({
