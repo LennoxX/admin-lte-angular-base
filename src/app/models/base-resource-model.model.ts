@@ -1,6 +1,6 @@
 
 export abstract class BaseResourceModel {
-    Id?: string;
+    id?: number;
 
     deserialize(input: any) {}
 }

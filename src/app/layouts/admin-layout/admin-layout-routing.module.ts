@@ -6,7 +6,8 @@ import { HomeComponentComponent } from 'src/app/pages/home/home-component/home-c
 
 
 const routes: Routes = [
-  {path: '', component: HomeComponentComponent, canActivate: [AuthGuard]},
+  {path: '', component: HomeComponentComponent /* , canActivate: [AuthGuard] */},
+  {path: 'aluno', loadChildren: ()=> import('./../../pages/aluno/aluno.module').then(m=>m.AlunoModule) /* , canActivate: [AuthGuard] */},
 ];
 
 @NgModule({

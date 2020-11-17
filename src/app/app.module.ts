@@ -1,3 +1,5 @@
+import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
 import { TokenService } from './services/token-service.service';
 import { AuthService } from './services/auth-service.service';
 import { AuthInterceptor } from './interceptors/auth-interceptor.service';
@@ -9,6 +11,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ComponentsModule } from './components/components.module';
 import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {ConfirmDialogModule} from 'primeng/confirmdialog';
+import {ConfirmationService} from 'primeng/api';
 @NgModule({
   declarations: [
     AppComponent,  
@@ -19,11 +25,18 @@ import { RouterModule } from '@angular/router';
     RouterModule,
     AppRoutingModule,
     ComponentsModule,
+    ToastModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ConfirmDialogModule
     
   ],
   providers: [
     AuthService,
     TokenService,
+    MessageService,
+    ConfirmationService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,

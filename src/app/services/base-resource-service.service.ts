@@ -60,14 +60,14 @@ export abstract class BaseResourceService<T extends BaseResourceModel> {
 
   // Metodos Protegidos
 
-  protected jsonDataToResources(jsonData: Response<T[]>): T[] {
+  protected jsonDataToResources(jsonData: T[]): T[] {
     const resources: T[] = [];
-    jsonData.data.forEach(element => resources.push(element as T));
+    jsonData.forEach(element => resources.push(element as T));
     return resources;
   }
 
-  protected jsonDataToResource(jsonData: Response<T>): T {
-    return jsonData.data as T;
+  protected jsonDataToResource(jsonData: T): T {
+    return jsonData as T;
   }
 /* 
   protected jsonDataPagesToResources(jsonData: Response<Page<T>>): Page<T> {
