@@ -13,7 +13,7 @@
                 <div class="container-fluid">
                     <router-outlet></router-outlet>
                     <p-toast></p-toast>
-                    <p-confirmDialog #cd header="Atenção!" icon="pi pi-exclamation-triangle" message="Você deseja prosseguir com essa ação?">
+                    <p-confirmDialog #cd header="Atenção!"  position="top" icon="pi pi-exclamation-triangle" message="Você deseja prosseguir com essa ação?">
                         <p-footer>
                             <button type="button" pButton icon="pi pi-times" label="Não" (click)="cd.reject()"></button>
                             <button type="button" pButton icon="pi pi-check" label="Sim" (click)="cd.accept()"></button>

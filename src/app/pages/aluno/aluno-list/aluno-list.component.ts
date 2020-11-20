@@ -15,7 +15,6 @@ export class AlunoListComponent extends BaseListComponent<Aluno>{
 
   constructor(protected alunoService:AlunoService, protected confirmationService: ConfirmationService, protected messageService:MessageService) {
     super(alunoService, confirmationService, messageService);
-    console.log('aqui');
   }
 
   ngOnInit(): void {

@@ -1,3 +1,4 @@
+import { ToastModule } from 'primeng/toast';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -9,7 +10,8 @@ import { AuthenticationLayoutComponent } from './authentication-layout.component
   declarations: [AuthenticationLayoutComponent],
   imports: [
     CommonModule,
-    AuthenticationLayoutRoutingModule
+    AuthenticationLayoutRoutingModule,
+    ToastModule
   ]
 })
 export class AuthenticationLayoutModule { }

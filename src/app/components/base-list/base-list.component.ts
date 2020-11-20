@@ -23,20 +23,20 @@ export class BaseListComponent<T extends BaseResourceModel> implements OnInit {
 
   protected getResources() {
     this.loading = true;
-    setTimeout(() => {
-      this.resourceService.getAll().subscribe(
-        pages => {
-          this.resources = pages;
-          this.loading = false;
-        },
-        error => {
-          this.actionsForError(error);
-          this.loading = false;
-        }
-      );
-    }, 2000);
-
-
+  setTimeout(() => {
+    this.resourceService.getAll().subscribe(
+      pages => {
+        this.resources = pages;
+        this.loading = false;
+      },
+      error => {
+        this.actionsForError(error);
+        this.loading = false;
+      }
+    );
+  }, 3000)
+      
+    
   }
   protected actionsForError(error: any) {
     this.messageService.add({

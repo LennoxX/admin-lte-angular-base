@@ -1,3 +1,4 @@
+import { User } from './../models/user.model';
 import { Injectable } from "@angular/core";
 
 @Injectable({
@@ -8,6 +9,14 @@ export class TokenService {
 
   storeToken(token: string) {
     sessionStorage.setItem("token", "Bearer " + token);
+  }
+
+  storeUser(user: User) {
+    sessionStorage.setItem('user', user.username);
+  }
+
+  getUser(): string{
+    return sessionStorage.getItem('user');
   }
 
   getToken() {

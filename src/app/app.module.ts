@@ -15,6 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {ConfirmDialogModule} from 'primeng/confirmdialog';
 import {ConfirmationService} from 'primeng/api';
+import { TitleCasePipe } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,  
@@ -29,13 +30,14 @@ import {ConfirmationService} from 'primeng/api';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    ConfirmDialogModule
+    ConfirmDialogModule,
     
   ],
   providers: [
     AuthService,
     TokenService,
     MessageService,
+    TitleCasePipe,
     ConfirmationService,
     {
       provide: HTTP_INTERCEPTORS,

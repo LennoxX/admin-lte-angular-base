@@ -1,3 +1,4 @@
+import { AdminLayoutModule } from './../../layouts/admin-layout/admin-layout.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -16,7 +17,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AlunoRoutingModule,
     TableModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AdminLayoutModule
   ]
 })
 export class AlunoModule { }

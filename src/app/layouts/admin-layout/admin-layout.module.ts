@@ -7,7 +7,7 @@ import { AdminLayoutComponent } from './admin-layout.component';
 import { ComponentsModule } from 'src/app/components/components.module';
 import { CommonModule } from '@angular/common';
 import {ToastModule} from 'primeng/toast';
-
+import {ProgressBarModule} from 'primeng/progressbar';
 
 @NgModule({
   declarations: [AdminLayoutComponent],
@@ -16,8 +16,14 @@ import {ToastModule} from 'primeng/toast';
     AdminLayoutRoutingModule,
     ComponentsModule,
     ToastModule,
-    ConfirmDialogModule
+    ConfirmDialogModule,
+    ProgressBarModule
+    
+
   ],
+  exports: [
+    ProgressBarModule
+  ]
  
 })
 export class AdminLayoutModule { }

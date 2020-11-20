@@ -2,9 +2,9 @@ import { BaseResourceModel } from './base-resource-model.model';
 
 export class User extends BaseResourceModel {
     constructor(
-        public Username?: string,
-        public Password?: string,
-        public Role?: string
+        public username?: string,
+        public password?: string,
+        public role?: string
     ) {
         super();
     }
